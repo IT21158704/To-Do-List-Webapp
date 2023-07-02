@@ -12,7 +12,6 @@ function UpdateForm({ item, onUpdate, onCancel }) {
       .put("http://localhost:8070/todo/update/" + item._id, { todo: updatedItem })
       .then((response) => {
         console.log(response.data);
-        alert("Item Updated");
         onUpdate();
       })
       .catch((error) => {
